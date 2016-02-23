@@ -1,0 +1,1034 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.5.0" />
+
+
+
+
+
+
+<meta name="description" content="项目其实技术上没什么的无法就是个：简单微信开发+简单web后台系统+连接门禁设备这么个东西，但是东西小是小，坑巨多：项目的客户是开发部门的老板？！因为他想搞这么个东西就叫我们去弄，然后我就成了他眼中那个万能的程序员了，从买服务器，拉专线，备案80端口，自己写需求，做原型，挖人（因为我技术确实一般，再说一个人开发个蛋啊），问门禁产商确定用哪种产品，联系他们索取sdk开发包，前后端html，js，ph">
+<meta property="og:type" content="article">
+<meta property="og:title" content="第一次做项目，知识积累">
+<meta property="og:url" content="http://yoursite.com/2016/02/23/第一次做项目，知识积累/index.html">
+<meta property="og:site_name" content="在路上">
+<meta property="og:description" content="项目其实技术上没什么的无法就是个：简单微信开发+简单web后台系统+连接门禁设备这么个东西，但是东西小是小，坑巨多：项目的客户是开发部门的老板？！因为他想搞这么个东西就叫我们去弄，然后我就成了他眼中那个万能的程序员了，从买服务器，拉专线，备案80端口，自己写需求，做原型，挖人（因为我技术确实一般，再说一个人开发个蛋啊），问门禁产商确定用哪种产品，联系他们索取sdk开发包，前后端html，js，ph">
+<meta property="og:updated_time" content="2016-02-23T07:26:49.817Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="第一次做项目，知识积累">
+<meta name="twitter:description" content="项目其实技术上没什么的无法就是个：简单微信开发+简单web后台系统+连接门禁设备这么个东西，但是东西小是小，坑巨多：项目的客户是开发部门的老板？！因为他想搞这么个东西就叫我们去弄，然后我就成了他眼中那个万能的程序员了，从买服务器，拉专线，备案80端口，自己写需求，做原型，挖人（因为我技术确实一般，再说一个人开发个蛋啊），问门禁产商确定用哪种产品，联系他们索取sdk开发包，前后端html，js，ph">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: "post",
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> 第一次做项目，知识积累 | 在路上 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+  
+  
+
+  <div class="container one-collumn  page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">在路上</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+<li> <a title="把这个链接拖到你的Chrome收藏夹工具栏中" href='javascript:(function() {
+    function c() {
+        var e = document.createElement("link");
+        e.setAttribute("type", "text/css");
+        e.setAttribute("rel", "stylesheet");
+        e.setAttribute("href", f);
+        e.setAttribute("class", l);
+        document.body.appendChild(e)
+    }
+ 
+    function h() {
+        var e = document.getElementsByClassName(l);
+        for (var t = 0; t < e.length; t++) {
+            document.body.removeChild(e[t])
+        }
+    }
+ 
+    function p() {
+        var e = document.createElement("div");
+        e.setAttribute("class", a);
+        document.body.appendChild(e);
+        setTimeout(function() {
+            document.body.removeChild(e)
+        }, 100)
+    }
+ 
+    function d(e) {
+        return {
+            height : e.offsetHeight,
+            width : e.offsetWidth
+        }
+    }
+ 
+    function v(i) {
+        var s = d(i);
+        return s.height > e && s.height < n && s.width > t && s.width < r
+    }
+ 
+    function m(e) {
+        var t = e;
+        var n = 0;
+        while (!!t) {
+            n += t.offsetTop;
+            t = t.offsetParent
+        }
+        return n
+    }
+ 
+    function g() {
+        var e = document.documentElement;
+        if (!!window.innerWidth) {
+            return window.innerHeight
+        } else if (e && !isNaN(e.clientHeight)) {
+            return e.clientHeight
+        }
+        return 0
+    }
+ 
+    function y() {
+        if (window.pageYOffset) {
+            return window.pageYOffset
+        }
+        return Math.max(document.documentElement.scrollTop, document.body.scrollTop)
+    }
+ 
+    function E(e) {
+        var t = m(e);
+        return t >= w && t <= b + w
+    }
+ 
+    function S() {
+        var e = document.createElement("audio");
+        e.setAttribute("class", l);
+        e.src = i;
+        e.loop = false;
+        e.addEventListener("canplay", function() {
+            setTimeout(function() {
+                x(k)
+            }, 500);
+            setTimeout(function() {
+                N();
+                p();
+                for (var e = 0; e < O.length; e++) {
+                    T(O[e])
+                }
+            }, 15500)
+        }, true);
+        e.addEventListener("ended", function() {
+            N();
+            h()
+        }, true);
+        e.innerHTML = " <p>If you are reading this, it is because your browser does not support the audio element. We recommend that you get a new browser.</p> <p>";
+        document.body.appendChild(e);
+        e.play()
+    }
+ 
+    function x(e) {
+        e.className += " " + s + " " + o
+    }
+ 
+    function T(e) {
+        e.className += " " + s + " " + u[Math.floor(Math.random() * u.length)]
+    }
+ 
+    function N() {
+        var e = document.getElementsByClassName(s);
+        var t = new RegExp("\\b" + s + "\\b");
+        for (var n = 0; n < e.length; ) {
+            e[n].className = e[n].className.replace(t, "")
+        }
+    }
+ 
+    var e = 30;
+    var t = 30;
+    var n = 350;
+    var r = 350;
+    var i = "//s3.amazonaws.com/moovweb-marketing/playground/harlem-shake.mp3";
+    var s = "mw-harlem_shake_me";
+    var o = "im_first";
+    var u = ["im_drunk", "im_baked", "im_trippin", "im_blown"];
+    var a = "mw-strobe_light";
+    var f = "//s3.amazonaws.com/moovweb-marketing/playground/harlem-shake-style.css";
+    var l = "mw_added_css";
+    var b = g();
+    var w = y();
+    var C = document.getElementsByTagName("*");
+    var k = null;
+    for (var L = 0; L < C.length; L++) {
+        var A = C[L];
+        if (v(A)) {
+            if (E(A)) {
+                k = A;
+                break
+            }
+        }
+    }
+    if (A === null) {
+        console.warn("Could not find a node of the right size. Please try a different page.");
+        return
+    }
+    c();
+    S();
+    var O = [];
+    for (var L = 0; L < C.length; L++) {
+        var A = C[L];
+        if (v(A)) {
+            O.push(A)
+        }
+    }
+})()    '>High一下</a> </li>
+      
+        
+        <li class="menu-item menu-item-home">
+
+          <a href="/" rel="section">
+
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+
+          <a href="/categories" rel="section">
+
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+
+          <a href="/about" rel="section">
+
+            
+              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+
+          <a href="/archives" rel="section">
+
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+
+          <a href="/tags" rel="section">
+
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+      
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                第一次做项目，知识积累
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-02-23T10:57:26+08:00" content="2016-02-23">
+              2016-02-23
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/关于计算机/" itemprop="url" rel="index">
+                    <span itemprop="name">关于计算机</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/02/23/第一次做项目，知识积累/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/23/第一次做项目，知识积累/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>项目其实技术上没什么的<br>无法就是个：简单微信开发+简单web后台系统+连接门禁设备<br>这么个东西，<br>但是东西小是小，坑巨多：<br>项目的客户是开发部门的老板？！因为他想搞这么个东西就叫我们去弄，然后我就成了他眼中那个万能的程序员了，从买服务器，拉专线，备案80端口，自己写需求，做原型，挖人（因为我技术确实一般，再说一个人开发个蛋啊），问门禁产商确定用哪种产品，联系他们索取sdk开发包，前后端html，js，php，mysql……<br>就是这么刺激你敢信，我他喵才刚毕业不久啊，以上全部没人带啊，百度多少东西我自己都不知道了啊<br>(╯‵□′)╯︵┻━┻<br>吐槽结束，下面是正题：</p>
+<a id="more"></a>
+<p>现在从别的地方挖来一个稍微靠谱的开发，他带着我和几个菜鸟开始搞起了。我被分配到写web后台，以下是这两天的学习成果。</p>
+<p>js-&gt;ajax-&gt;jq-&gt;json-&gt;esayUI-&gt;php-&gt;mysql</p>
+<hr>
+<h1 id="js"><a href="#js" class="headerlink" title="js"></a>js</h1><h2 id="u7B80_u4ECB"><a href="#u7B80_u4ECB" class="headerlink" title="简介"></a>简介</h2><p>js可以干嘛：1写入/改变HTML输出、2对事件做反应、3改变HTML样式、4验证用户输入</p>
+<h2 id="u683C_u5F0F"><a href="#u683C_u5F0F" class="headerlink" title="格式"></a>格式</h2><p>脚本可放于<body><head>中、必须用 <script></script>括起来<br>JavaScript 对大小写是敏感的。JavaScript 会忽略多余的空格。<br>对代码行进行折行<br>您可以在文本字符串中使用反斜杠对代码行进行换行。下面的例子会正确地显示：<br>document.write(“Hello \<br>World!”);<br>单行注释以 // 开头。多行注释以 /<em> 开始，以 </em>/ 结尾。<br>一般把js函数放在<head>中，然后在</head></head><body>中调用<br>还可以放在外部文件，然后用 <script src=""></script>引用</body></body></p>
+<h2 id="u6539_u53D8_u5143_u7D20"><a href="#u6539_u53D8_u5143_u7D20" class="headerlink" title="改变元素"></a>改变元素</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">p</span> <span class="attribute">id</span>=<span class="value">"demo"</span>&gt;</span>My First Paragraph<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript"></span><br><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">"demo"</span>).innerHTML=<span class="string">"My First JavaScript"</span>;</span><br><span class="line"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line">输出html</span><br><span class="line"><span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript"></span><br><span class="line"><span class="built_in">document</span>.write(<span class="string">"&lt;p&gt;My First JavaScript&lt;/p&gt;"</span>);</span><br><span class="line"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="u53D8_u91CF_u58F0_u660E"><a href="#u53D8_u91CF_u58F0_u660E" class="headerlink" title="变量声明"></a>变量声明</h2><p>var name=”Gates”,<br>age=56,<br>job=”CEO”;        </p>
+<p>变量的类型有：</p>
+<blockquote>
+<ul>
+<li><p>数字<br>var x1=34.00;      //使用小数点来写<br>var x2=34;         //不使用小数点来写</p>
+</li>
+<li><p>字符<br>var carname=”Bill Gates”;<br>var carname=’Bill Gates’;<br>您可以在字符串中使用引号，只要不匹配包围字符串的引号即可：</p>
+</li>
+<li><p>布尔<br>var x=true<br>var y=false</p>
+</li>
+<li><p>数组<br>var cars=new Array();<br>cars[0]=”Audi”;<br>cars[1]=”BMW”;<br>cars[2]=”Volvo”;<br>var cars=new Array(“Audi”,”BMW”,”Volvo”);<br>var cars=[“Audi”,”BMW”,”Volvo”];</p>
+</li>
+<li><p>对象<br>对象由花括号分隔。在括号内部，对象的属性以名称和值对的形式 (name : value) 来定义。属性由逗号分隔：<br>var person={firstname:”Bill”, lastname:”Gates”, id:5566};</p>
+</li>
+</ul>
+</blockquote>
+<p>上面例子中的对象 (person) 有三个属性：firstname、lastname 以及 id。<br>空格和折行无关紧要。声明可横跨多行：<br>var person={<br>firstname : “Bill”,<br>lastname  : “Gates”,<br>id        :  5566<br>};<br>对象属性有两种寻址方式：<br>实例<br>name=person.lastname;<br>name=person[“lastname”];</p>
+<p>JavaScript 变量均为对象。当您声明一个变量时，就创建了一个新的对象。</p>
+<h2 id="u8BBF_u95EE_u5BF9_u8C61_u5C5E_u6027_u548C_u51FD_u6570"><a href="#u8BBF_u95EE_u5BF9_u8C61_u5C5E_u6027_u548C_u51FD_u6570" class="headerlink" title="访问对象属性和函数"></a>访问对象属性和函数</h2><p>访问对象属性<br>var message=”Hello World!”;<br>var x=message.length;<br>输出x=12<br>访问对象函数<br>var message=”Hello world!”;<br>var x=message.toUpperCase();<br>输出HELLO WORLD</p>
+<h2 id="u51FD_u6570_u5B9A_u4E49"><a href="#u51FD_u6570_u5B9A_u4E49" class="headerlink" title="函数定义"></a>函数定义</h2><p>function functionname(var1,var2)<br>{<br>这里是要执行的代码<br>}<br>栗子：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">button</span> <span class="attribute">onclick</span>=<span class="value">"myFunction('Bill Gates','CEO')"</span>&gt;</span>点击这里<span class="tag">&lt;/<span class="title">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="actionscript"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">myFunction</span><span class="params">(name,job)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">alert(<span class="string">"Welcome "</span> + name + <span class="string">", the "</span> + job);</span><br><span class="line">&#125;</span><br><span class="line"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="u5B57_u7B26_u64CD_u4F5C_u3001_u6570_u5B57_u8FD0_u7B97"><a href="#u5B57_u7B26_u64CD_u4F5C_u3001_u6570_u5B57_u8FD0_u7B97" class="headerlink" title="字符操作、数字运算"></a>字符操作、数字运算</h2><p>如果把数字与字符串相加，结果将成为字符串。</p>
+<p>+— &amp;&amp; if..Else Switch For While Break</p>
+<h2 id="js_u9519_u8BEF"><a href="#js_u9519_u8BEF" class="headerlink" title="js错误"></a>js错误</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line">try-catch</span><br><span class="line"><span class="doctype">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="actionscript"></span><br><span class="line"><span class="keyword">var</span> txt=<span class="string">""</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">message</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line"><span class="keyword">try</span></span><br><span class="line">  &#123;</span><br><span class="line">  adddlert(<span class="string">"Welcome guest!"</span>);</span><br><span class="line">  &#125;</span><br><span class="line"><span class="keyword">catch</span>(err)</span><br><span class="line">  &#123;</span><br><span class="line">  txt=<span class="string">"There was an error on this page.\n\n"</span>;</span><br><span class="line">  txt+=<span class="string">"Error description: "</span> + err.message + <span class="string">"\n\n"</span>;</span><br><span class="line">  txt+=<span class="string">"Click OK to continue.\n\n"</span>;</span><br><span class="line">  alert(txt);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="title">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"button"</span> <span class="attribute">value</span>=<span class="value">"View message"</span> <span class="attribute">onclick</span>=<span class="value">"message()"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="title">html</span>&gt;</span></span><br><span class="line"></span><br><span class="line">throw</span><br><span class="line"><span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">myFunction</span>(<span class="params"></span>)</span><br><span class="line"></span>&#123;</span><br><span class="line"><span class="keyword">try</span></span><br><span class="line">  &#123;</span><br><span class="line">  <span class="keyword">var</span> x=<span class="built_in">document</span>.getElementById(<span class="string">"demo"</span>).value;</span><br><span class="line">  <span class="keyword">if</span>(x==<span class="string">""</span>)    <span class="keyword">throw</span> <span class="string">"empty"</span>;</span><br><span class="line">  <span class="keyword">if</span>(<span class="built_in">isNaN</span>(x)) <span class="keyword">throw</span> <span class="string">"not a number"</span>;</span><br><span class="line">  <span class="keyword">if</span>(x&gt;<span class="number">10</span>)     <span class="keyword">throw</span> <span class="string">"too high"</span>;</span><br><span class="line">  <span class="keyword">if</span>(x&lt;<span class="number">5</span>)      <span class="keyword">throw</span> <span class="string">"too low"</span>;</span><br><span class="line">  &#125;</span><br><span class="line"><span class="keyword">catch</span>(err)</span><br><span class="line">  &#123;</span><br><span class="line">  <span class="keyword">var</span> y=<span class="built_in">document</span>.getElementById(<span class="string">"mess"</span>);</span><br><span class="line">  y.innerHTML=<span class="string">"Error: "</span> + err + <span class="string">"."</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="title">h1</span>&gt;</span>My First JavaScript<span class="tag">&lt;/<span class="title">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">p</span>&gt;</span>Please input a number between 5 and 10:<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">input</span> <span class="attribute">id</span>=<span class="value">"demo"</span> <span class="attribute">type</span>=<span class="value">"text"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">button</span> <span class="attribute">type</span>=<span class="value">"button"</span> <span class="attribute">onclick</span>=<span class="value">"myFunction()"</span>&gt;</span>Test Input<span class="tag">&lt;/<span class="title">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">p</span> <span class="attribute">id</span>=<span class="value">"mess"</span>&gt;</span><span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="u8868_u5355_u6570_u636E_u9A8C_u8BC1"><a href="#u8868_u5355_u6570_u636E_u9A8C_u8BC1" class="headerlink" title="表单数据验证"></a>表单数据验证</h2><h3 id="u7A7A_u503C_u9A8C_u8BC1"><a href="#u7A7A_u503C_u9A8C_u8BC1" class="headerlink" title="空值验证"></a>空值验证</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="actionscript"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">validate_required</span><span class="params">(field,alerttxt)</span></span><br><span class="line"></span>&#123;</span><br><span class="line"><span class="keyword">with</span> (field)</span><br><span class="line">  &#123;</span><br><span class="line">  <span class="keyword">if</span> (value==<span class="literal">null</span>||value==<span class="string">""</span>)</span><br><span class="line">    &#123;alert(alerttxt);<span class="keyword">return</span> <span class="literal">false</span>&#125;</span><br><span class="line">  <span class="keyword">else</span> &#123;<span class="keyword">return</span> <span class="literal">true</span>&#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">validate_form</span><span class="params">(thisform)</span></span><br><span class="line"></span>&#123;</span><br><span class="line"><span class="keyword">with</span> (thisform)</span><br><span class="line">  &#123;</span><br><span class="line">  <span class="keyword">if</span> (validate_required(email,<span class="string">"Email must be filled out!"</span>)==<span class="literal">false</span>)</span><br><span class="line">    &#123;email.focus();<span class="keyword">return</span> <span class="literal">false</span>&#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="title">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">form</span> <span class="attribute">action</span>=<span class="value">"submitpage.htm"</span> <span class="attribute">onsubmit</span>=<span class="value">"return validate_form(this)"</span> <span class="attribute">method</span>=<span class="value">"post"</span>&gt;</span></span><br><span class="line">Email: <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">name</span>=<span class="value">"email"</span> <span class="attribute">size</span>=<span class="value">"30"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"submit"</span> <span class="attribute">value</span>=<span class="value">"Submit"</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;/<span class="title">form</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="title">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="e-mail_u683C_u5F0F_u9A8C_u8BC1"><a href="#e-mail_u683C_u5F0F_u9A8C_u8BC1" class="headerlink" title="e-mail格式验证"></a>e-mail格式验证</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="actionscript"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">validate_email</span><span class="params">(field,alerttxt)</span></span><br><span class="line"></span>&#123;</span><br><span class="line"><span class="keyword">with</span> (field)</span><br><span class="line">&#123;</span><br><span class="line">apos=value.indexOf(<span class="string">"@"</span>)</span><br><span class="line">dotpos=value.lastIndexOf(<span class="string">"."</span>)</span><br><span class="line"><span class="keyword">if</span> (apos&lt;<span class="number">1</span>||dotpos-apos&lt;<span class="number">2</span>) </span><br><span class="line">  &#123;alert(alerttxt);<span class="keyword">return</span> <span class="literal">false</span>&#125;</span><br><span class="line"><span class="keyword">else</span> &#123;<span class="keyword">return</span> <span class="literal">true</span>&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">validate_form</span><span class="params">(thisform)</span></span><br><span class="line"></span>&#123;</span><br><span class="line"><span class="keyword">with</span> (thisform)</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">if</span> (validate_email(email,<span class="string">"Not a valid e-mail address!"</span>)==<span class="literal">false</span>)</span><br><span class="line">  &#123;email.focus();<span class="keyword">return</span> <span class="literal">false</span>&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="title">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">form</span> <span class="attribute">action</span>=<span class="value">"submitpage.htm"</span><span class="value">onsubmit="return</span> <span class="attribute">validate_form</span>(<span class="attribute">this</span>);" <span class="attribute">method</span>=<span class="value">"post"</span>&gt;</span></span><br><span class="line">Email: <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">name</span>=<span class="value">"email"</span> <span class="attribute">size</span>=<span class="value">"30"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"submit"</span> <span class="attribute">value</span>=<span class="value">"Submit"</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;/<span class="title">form</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="title">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="u7528JS_u64CD_u4F5CHTML_u6807_u7B7E"><a href="#u7528JS_u64CD_u4F5CHTML_u6807_u7B7E" class="headerlink" title="用JS操作HTML标签"></a>用JS操作HTML标签</h2><p>文档对象模型</p>
+<blockquote>
+<ul>
+<li>改变html输出流：document.getElementById(id).innerHTML=new HTML</li>
+<li>写到html中：document.write(Date())</li>
+<li>改变html属性：document.getElementById(id).attribute=new value</li>
+<li>改变html样式：document.getElementById(id).style.property=new style</li>
+</ul>
+</blockquote>
+<p>事件：</p>
+<blockquote>
+<ul>
+<li>onload 和 onunload 事件</li>
+<li>onchange 事件</li>
+<li>onmouseover 和 onmouseout 事件</li>
+<li>onmousedown、onmouseup 以及 onclick 事件</li>
+</ul>
+</blockquote>
+<p>栗子：（1）<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="doctype">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="actionscript"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">changetext</span><span class="params">(id)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">id.innerHTML=<span class="string">"谢谢!"</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">h1</span> <span class="attribute">onclick</span>=<span class="value">"changetext(this)"</span>&gt;</span>请点击该文本<span class="tag">&lt;/<span class="title">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">html</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>（2）<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">button</span> <span class="attribute">onclick</span>=<span class="value">"displayDate()"</span>&gt;</span>点击这里<span class="tag">&lt;/<span class="title">button</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="u521B_u5EFA_u548C_u5220_u9664HTML_u6807_u7B7E"><a href="#u521B_u5EFA_u548C_u5220_u9664HTML_u6807_u7B7E" class="headerlink" title="创建和删除HTML标签"></a>创建和删除HTML标签</h2><p>创建新的 HTML 元素（可用于表格行的循环建立）<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"div1"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">p</span> <span class="attribute">id</span>=<span class="value">"p1"</span>&gt;</span>这是一个段落<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">p</span> <span class="attribute">id</span>=<span class="value">"p2"</span>&gt;</span>这是另一个段落<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript"></span><br><span class="line"><span class="keyword">var</span> para=<span class="built_in">document</span>.createElement(<span class="string">"p"</span>);</span><br><span class="line"><span class="keyword">var</span> node=<span class="built_in">document</span>.createTextNode(<span class="string">"这是新段落。"</span>);</span><br><span class="line">para.appendChild(node);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> element=<span class="built_in">document</span>.getElementById(<span class="string">"div1"</span>);</span><br><span class="line">element.appendChild(para);</span><br><span class="line"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>删除已有的 HTML 元素<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"div1"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">p</span> <span class="attribute">id</span>=<span class="value">"p1"</span>&gt;</span>这是一个段落。<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">p</span> <span class="attribute">id</span>=<span class="value">"p2"</span>&gt;</span>这是另一个段落。<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript"></span><br><span class="line"><span class="keyword">var</span> parent=<span class="built_in">document</span>.getElementById(<span class="string">"div1"</span>);</span><br><span class="line"><span class="keyword">var</span> child=<span class="built_in">document</span>.getElementById(<span class="string">"p1"</span>);</span><br><span class="line">parent.removeChild(child);</span><br><span class="line"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="JS_Window"><a href="#JS_Window" class="headerlink" title="JS Window"></a>JS Window</h2><pre><code>JS Window
+JS Screen
+JS Location
+JS History
+JS Navigator
+JS PopupAlert
+JS Timing
+JS Cookies
+</code></pre><h1 id="ajax__u5F02_u6B65_u66F4_u65B0_uFF0C"><a href="#ajax__u5F02_u6B65_u66F4_u65B0_uFF0C" class="headerlink" title="ajax 异步更新，"></a>ajax 异步更新，</h1><h2 id="u521B_u5EFA_u5BF9_u8C61"><a href="#u521B_u5EFA_u5BF9_u8C61" class="headerlink" title="创建对象"></a>创建对象</h2><p>XMLHttpRequest、（IE5 和 IE6 使用 ActiveXObject）<br>创建 XMLHttpRequest 对象的语法：<br>variable=new XMLHttpRequest();<br>老版本的 Internet Explorer （IE5 和 IE6）使用 ActiveX 对象：<br>variable=new ActiveXObject(“Microsoft.XMLHTTP”);<br>//有了这个对象后可以干嘛？<br>二、发送请求<br>如需将请求发送到服务器，我们使用 XMLHttpRequest 对象的 open() 和 send() 方法：<br>xmlhttp.open(“GET”,”test1.txt”,true);<br>xmlhttp.send();<br>|方法             |    描述    |<br>|——-        |———-    |<br>|open(method,url,async) |规定请求的类型、URL 以及是否异步处理请求。</p>
+<pre><code>method：请求的类型；GET 或 POST
+url：文件在服务器上的位置
+async：true（异步）或 false（同步）
+</code></pre><p>|send(string)        |     将请求发送到服务器。</p>
+<pre><code>string：仅用于 POST 请求
+</code></pre><p>GET 还是 POST？</p>
+<p>与 POST 相比，GET 更简单也更快，并且在大部分情况下都能用。</p>
+<p>然而，在以下情况中，请使用 POST 请求：</p>
+<pre><code>无法使用缓存文件（更新服务器上的文件或数据库）
+向服务器发送大量数据（POST 没有数据量限制）
+发送包含未知字符的用户输入时，POST 比 GET 更稳定也更可靠
+</code></pre><p>xmlhttp.open(“POST”,”ajax_test.asp”,true);<br>xmlhttp.setRequestHeader(“Content-type”,”application/x-www-form-urlencoded”);<br>xmlhttp.send(“fname=Bill&amp;lname=Gates”);</p>
+<pre><code>临时接到任务，备案80端口
+弄清流程，找资料，备案
+
+测试80端口是否开启（用telnet ip 端口 80 空白则是有开启的）
+企业拉专线2m/800/month 4m/1000/month
+80端口备案需要企业营业执照就可以了
+</code></pre><hr>
+<h2 id="u5F00_u5751"><a href="#u5F00_u5751" class="headerlink" title="开坑"></a>开坑</h2><p><b>按我的理解，ajax就是用var xmlhttp;开一个坑后，用下面的函数变成一个动态的坑</b><br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">function loadXMLDoc(url)</span><br><span class="line">&#123;</span><br><span class="line">xmlhttp=null;</span><br><span class="line">if (window.XMLHttpRequest)</span><br><span class="line">  &#123;// code for Firefox, Opera, IE7, etc.</span><br><span class="line">  xmlhttp=new XMLHttpRequest();</span><br><span class="line">  &#125;</span><br><span class="line">else if (window.ActiveXObject)</span><br><span class="line">  &#123;// code for IE6, IE5</span><br><span class="line">  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");</span><br><span class="line">  &#125;</span><br><span class="line">				————————上面是开坑</span><br><span class="line">if (xmlhttp!=null)</span><br><span class="line">  &#123;</span><br><span class="line">  xmlhttp.onreadystatechange=state_Change;</span><br><span class="line">  xmlhttp.open("GET",url,true);	————————这行表示坑底下的动通往哪里？</span><br><span class="line">  xmlhttp.send(null);		————————</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></p>
+<p>用get或post拿用户的操作/数据<br>url是数据/操作提交的地方<br>第三个参数规定应当对请求进行异步地处理(true（异步）或 false（同步）)。</p>
+<h2 id="u54CD_u5E94_u6709_u4E24_u79CD_uFF1A"><a href="#u54CD_u5E94_u6709_u4E24_u79CD_uFF1A" class="headerlink" title="响应有两种："></a>响应有两种：</h2><p>一种是txt：<br><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">"myDiv"</span>).innerHTML=xmlhttp.responseText;</span><br></pre></td></tr></table></figure></p>
+<p>一种是XML：<br><figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">xmlDoc=xmlhttp.responseXML<span class="comment">;</span></span><br><span class="line">txt=<span class="string">""</span><span class="comment">;</span></span><br><span class="line">x=xmlDoc.getElementsByTagName(<span class="string">"ARTIST"</span>)<span class="comment">;</span></span><br><span class="line"><span class="keyword">for</span> (i=<span class="number">0</span><span class="comment">;i&lt;x.length;i++)</span></span><br><span class="line">  &#123;</span><br><span class="line">  txt=txt + x[i].childNodes[<span class="number">0</span>].nodeValue + <span class="string">"&lt;br /&gt;"</span><span class="comment">;</span></span><br><span class="line">  &#125;</span><br><span class="line">document.getElementById(<span class="string">"myDiv"</span>).innerHTML=txt<span class="comment">;</span></span><br></pre></td></tr></table></figure></p>
+<p>都他喵的不太懂，打算过了</p>
+<h2 id="onreadystatechange"><a href="#onreadystatechange" class="headerlink" title="onreadystatechange"></a>onreadystatechange</h2><table>
+<thead>
+<tr>
+<th>onreadystatechange</th>
+<th>存储函数（或函数名），每当 readyState属性改变时，就会调用该函数。</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>readyState</td>
+<td>存有 XMLHttpRequest 的状态。<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;从 0 到 4 发生变化。<br> 0: 请求未初始化<br> 1: 服务器连接已建立 <br>2: 请求已接收<br> 3: 请求处理中 <br>4: 请求已完成，且响应已就绪</td>
+</tr>
+<tr>
+<td>status</td>
+<td>200: “OK”<br> 404: 未找到页面</td>
+</tr>
+</tbody>
+</table>
+<p>例子<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">xmlhttp.onreadystatechange=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span><br><span class="line">  </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (xmlhttp.readyState==<span class="number">4</span> &amp;&amp; xmlhttp.status==<span class="number">200</span>)</span><br><span class="line">    &#123;</span><br><span class="line">    <span class="built_in">document</span>.getElementById(<span class="string">"myDiv"</span>).innerHTML=xmlhttp.responseText;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="u52A8_u6001_u7F16_u8BD1"><a href="#u52A8_u6001_u7F16_u8BD1" class="headerlink" title="动态编译"></a>动态编译</h2><p>暂时不看,过</p>
+<hr>
+<h1 id="JQ"><a href="#JQ" class="headerlink" title="JQ"></a>JQ</h1><h2 id="u52A0_u8F7D"><a href="#u52A0_u8F7D" class="headerlink" title="加载"></a>加载</h2><p>可用MS公司提供的加载<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"</span>&gt;</span><span class="undefined"></span><br><span class="line"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">head</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="u4F8B_u5B50"><a href="#u4F8B_u5B50" class="headerlink" title="例子"></a>例子</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"/jquery/jquery.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"></span><br><span class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  $(<span class="string">"button"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    $(<span class="string">"#test"</span>).hide();</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="title">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">h2</span>&gt;</span>This is a heading<span class="tag">&lt;/<span class="title">h2</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">p</span>&gt;</span>This is a paragraph.<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">p</span> <span class="attribute">id</span>=<span class="value">"test"</span>&gt;</span>This is another paragraph.<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">button</span> <span class="attribute">type</span>=<span class="value">"button"</span>&gt;</span>Click me<span class="tag">&lt;/<span class="title">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="title">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="jq_u8BED_u6CD5"><a href="#jq_u8BED_u6CD5" class="headerlink" title="jq语法"></a>jq语法</h2><p>jQuery 语法是为 HTML 元素的选取编制的，可以对元素执行某些操作。</p>
+<blockquote>
+<p>基础语法是：$(selector).action()</p>
+<ul>
+<li>美元符号定义 jQuery</li>
+<li>选择符（selector）“查询”和“查找” HTML 元素</li>
+<li>jQuery 的 action() 执行对元素的操作</li>
+</ul>
+</blockquote>
+<p>示例</p>
+<blockquote>
+<ul>
+<li>$(this).hide() - 隐藏当前元素</li>
+<li>$(“p”).hide() - 隐藏所有段落</li>
+<li>$(“.test”).hide() - 隐藏所有 class=”test” 的所有元素</li>
+<li>$(“#test”).hide() - 隐藏所有 id=”test” 的元素</li>
+</ul>
+</blockquote>
+<p>您也许已经注意到在我们的实例中的所有 jQuery 函数位于一个 document ready 函数中：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">--- jQuery functions go here ----</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>这是为了防止文档在完全加载（就绪）之前运行 jQuery 代码。<br>如果在文档没有完全加载之前就运行函数，操作可能失败。下面是两个具体的例子：</p>
+<ul>
+<li>试图隐藏一个不存在的元素</li>
+<li>获得未完全加载的图像的大小</li>
+</ul>
+<h2 id="u9009_u62E9_u5668"><a href="#u9009_u62E9_u5668" class="headerlink" title="选择器"></a>选择器</h2><p>jQuery 元素选择器        $(“p.intro”) 选取所有 class=”intro” 的 </p><p> 元素。<br>jQuery 属性选择器        $(“[href$=’.jpg’]”) 选取所有 href 值以 “.jpg” 结尾的元素。<br>jQuery CSS 选择器        $(“p”).css(“background-color”,”red”);</p>
+<p>(￢_￢)，直接过了，感觉jq就是各种简单的库，没什么概念性的东西</p>
+<hr>
+<h1 id="json"><a href="#json" class="headerlink" title="json"></a>json</h1><p>一种类似XML但比他小的格式，</p>
+<h2 id="u4F8B_u5B50-1"><a href="#u4F8B_u5B50-1" class="headerlink" title="例子"></a>例子</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">h2</span>&gt;</span>在 JavaScript 中创建 JSON 对象<span class="tag">&lt;/<span class="title">h2</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="title">p</span>&gt;</span></span><br><span class="line">Name: <span class="tag">&lt;<span class="title">span</span> <span class="attribute">id</span>=<span class="value">"jname"</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;<span class="title">br</span> /&gt;</span></span><br><span class="line">Age: <span class="tag">&lt;<span class="title">span</span> <span class="attribute">id</span>=<span class="value">"jage"</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;<span class="title">br</span> /&gt;</span></span><br><span class="line">Address: <span class="tag">&lt;<span class="title">span</span> <span class="attribute">id</span>=<span class="value">"jstreet"</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;<span class="title">br</span> /&gt;</span></span><br><span class="line">Phone: <span class="tag">&lt;<span class="title">span</span> <span class="attribute">id</span>=<span class="value">"jphone"</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;<span class="title">br</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"></span><br><span class="line"><span class="keyword">var</span> JSONObject= &#123;</span><br><span class="line"><span class="string">"name"</span>:<span class="string">"Bill Gates"</span>,</span><br><span class="line"><span class="string">"street"</span>:<span class="string">"Fifth Avenue New York 666"</span>,</span><br><span class="line"><span class="string">"age"</span>:<span class="number">56</span>,</span><br><span class="line"><span class="string">"phone"</span>:<span class="string">"555 1234567"</span>&#125;;</span><br><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">"jname"</span>).innerHTML=JSONObject.name</span><br><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">"jage"</span>).innerHTML=JSONObject.age</span><br><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">"jstreet"</span>).innerHTML=JSONObject.street</span><br><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">"jphone"</span>).innerHTML=JSONObject.phone</span><br><span class="line"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="title">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>输出结果：</p>
+<blockquote>
+<p>Name: Bill Gates</p>
+<p>Age: 56</p>
+<p>Address: Fifth Avenue New York 666</p>
+<p>Phone: 555 1234567</p>
+</blockquote>
+<p>卧槽，就完了？<br>过！</p>
+<hr>
+<h1 id="php"><a href="#php" class="headerlink" title="php"></a>php</h1><h2 id="u5B89_u5168"><a href="#u5B89_u5168" class="headerlink" title="安全"></a>安全</h2><p>假设我们的一张名为 “test_form.php” 的页面中有如下表单：<br><figure class="highlight nimrod"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;form <span class="keyword">method</span>=<span class="string">"post"</span> action=<span class="string">"&lt;?php echo $_SERVER["</span><span class="string">PHP_SELF"];?&gt;"</span>&gt;</span><br></pre></td></tr></table></figure></p>
+<p>不过，如果用户在地址栏中键入了如下 URL：<br><figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http:<span class="regexp">//www</span>.example.com/test_form.php/<span class="variable">%22</span><span class="variable">%3E</span><span class="variable">%3Cscript</span><span class="variable">%3Ealert</span>(<span class="string">'hacked'</span>)<span class="variable">%3C</span>/script<span class="variable">%3E</span></span><br></pre></td></tr></table></figure></p>
+<p>在这种情况下，上面的代码会转换为：<br><figure class="highlight nimrod"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;form <span class="keyword">method</span>=<span class="string">"post"</span> action=<span class="string">"test_form.php"</span>/&gt;&lt;script&gt;alert('hacked')&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
+<p><del>基本都是些语法，然后我重点看如何连接mysql数据库的部分</del></p>
+<h2 id="mysql"><a href="#mysql" class="headerlink" title="mysql"></a>mysql</h2><p>常用命令<br>1、显示数据库  show databases;<br>2、显示库中的表  use mysql; show tables;<br>3、显示表结构  describe 表名;<br>4、建库： create database 库名;<br>5、建表： use 库名； create table 表名 (字段设定列表)；<br>6、删库和删表: drop database 库名; drop table 表名；<br>7、将表中记录清空： delete from 表名;<br>8、显示表中的记录： select * from 表名<br><del>继续php</del></p>
+<h2 id="PHP_u5982_u4F55_u8FDE_u63A5mysql"><a href="#PHP_u5982_u4F55_u8FDE_u63A5mysql" class="headerlink" title="PHP如何连接mysql"></a>PHP如何连接mysql</h2><figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line"><span class="variable">$con</span> = mysql_connect(<span class="string">"localhost"</span>,<span class="string">"peter"</span>,<span class="string">"abc123"</span>);</span><br><span class="line"><span class="keyword">if</span> (!<span class="variable">$con</span>)</span><br><span class="line">  &#123;</span><br><span class="line">  die(<span class="string">'Could not connect: '</span> . mysql_error());</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">// <span class="keyword">some</span> code</span><br><span class="line">	// Create database</span><br><span class="line">	<span class="keyword">if</span> (mysql_query(<span class="string">"CREATE DATABASE my_db"</span>,<span class="variable">$con</span>))</span><br><span class="line">	  &#123;</span><br><span class="line">	  echo <span class="string">"Database created"</span>;</span><br><span class="line">	  &#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	  &#123;</span><br><span class="line">	  echo <span class="string">"Error creating database: "</span> . mysql_error();</span><br><span class="line">	  &#125;</span><br><span class="line">	</span><br><span class="line">	// Create table <span class="keyword">in</span> my_db database</span><br><span class="line">	mysql_select_db(<span class="string">"my_db"</span>, <span class="variable">$con</span>);</span><br><span class="line">	<span class="variable">$sql</span> = <span class="string">"CREATE TABLE Persons </span><br><span class="line">	(</span><br><span class="line">	FirstName varchar(15),</span><br><span class="line">	LastName varchar(15),</span><br><span class="line">	Age int</span><br><span class="line">	)"</span>;</span><br><span class="line">	mysql_query(<span class="variable">$sql</span>,<span class="variable">$con</span>);</span><br><span class="line">// <span class="keyword">some</span> code</span><br><span class="line"></span><br><span class="line">mysql_close(<span class="variable">$con</span>);</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+<pre><code>好了，至此所有需要的知识都差不多了
+接下来的开发流程就是：
+1、配置数据库（设计表，在表里放实验数据）
+2、使用jq把demo版修改成活动的
+3、连接起来
+</code></pre>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/02/01/微信a访客-停车预约吹逼文档/" rel="next" title="微信a访客+停车预约吹逼文档 ">
+                <i class="fa fa-chevron-left"></i> 微信a访客+停车预约吹逼文档 
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/02/23/第一次做项目，知识积累/"
+           data-title="第一次做项目，知识积累" data-url="http://yoursite.com/2016/02/23/第一次做项目，知识积累/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/imgs/SysImgs/op.png"
+               alt="杨卓鑫" />
+          <p class="site-author-name" itemprop="name">杨卓鑫</p>
+          <p class="site-description motion-element" itemprop="description">生命不息，奋斗不止</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+          
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#js"><span class="nav-number">1.</span> <span class="nav-text">js</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#u7B80_u4ECB"><span class="nav-number">1.1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u683C_u5F0F"><span class="nav-number">1.2.</span> <span class="nav-text">格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u6539_u53D8_u5143_u7D20"><span class="nav-number">1.3.</span> <span class="nav-text">改变元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u53D8_u91CF_u58F0_u660E"><span class="nav-number">1.4.</span> <span class="nav-text">变量声明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u8BBF_u95EE_u5BF9_u8C61_u5C5E_u6027_u548C_u51FD_u6570"><span class="nav-number">1.5.</span> <span class="nav-text">访问对象属性和函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u51FD_u6570_u5B9A_u4E49"><span class="nav-number">1.6.</span> <span class="nav-text">函数定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u5B57_u7B26_u64CD_u4F5C_u3001_u6570_u5B57_u8FD0_u7B97"><span class="nav-number">1.7.</span> <span class="nav-text">字符操作、数字运算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#js_u9519_u8BEF"><span class="nav-number">1.8.</span> <span class="nav-text">js错误</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u8868_u5355_u6570_u636E_u9A8C_u8BC1"><span class="nav-number">1.9.</span> <span class="nav-text">表单数据验证</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u7A7A_u503C_u9A8C_u8BC1"><span class="nav-number">1.9.1.</span> <span class="nav-text">空值验证</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#e-mail_u683C_u5F0F_u9A8C_u8BC1"><span class="nav-number">1.9.2.</span> <span class="nav-text">e-mail格式验证</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u7528JS_u64CD_u4F5CHTML_u6807_u7B7E"><span class="nav-number">1.10.</span> <span class="nav-text">用JS操作HTML标签</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u521B_u5EFA_u548C_u5220_u9664HTML_u6807_u7B7E"><span class="nav-number">1.11.</span> <span class="nav-text">创建和删除HTML标签</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JS_Window"><span class="nav-number">1.12.</span> <span class="nav-text">JS Window</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ajax__u5F02_u6B65_u66F4_u65B0_uFF0C"><span class="nav-number">2.</span> <span class="nav-text">ajax 异步更新，</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#u521B_u5EFA_u5BF9_u8C61"><span class="nav-number">2.1.</span> <span class="nav-text">创建对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u5F00_u5751"><span class="nav-number">2.2.</span> <span class="nav-text">开坑</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u54CD_u5E94_u6709_u4E24_u79CD_uFF1A"><span class="nav-number">2.3.</span> <span class="nav-text">响应有两种：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#onreadystatechange"><span class="nav-number">2.4.</span> <span class="nav-text">onreadystatechange</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u52A8_u6001_u7F16_u8BD1"><span class="nav-number">2.5.</span> <span class="nav-text">动态编译</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JQ"><span class="nav-number">3.</span> <span class="nav-text">JQ</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#u52A0_u8F7D"><span class="nav-number">3.1.</span> <span class="nav-text">加载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u4F8B_u5B50"><span class="nav-number">3.2.</span> <span class="nav-text">例子</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#jq_u8BED_u6CD5"><span class="nav-number">3.3.</span> <span class="nav-text">jq语法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u9009_u62E9_u5668"><span class="nav-number">3.4.</span> <span class="nav-text">选择器</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#json"><span class="nav-number">4.</span> <span class="nav-text">json</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#u4F8B_u5B50-1"><span class="nav-number">4.1.</span> <span class="nav-text">例子</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#php"><span class="nav-number">5.</span> <span class="nav-text">php</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#u5B89_u5168"><span class="nav-number">5.1.</span> <span class="nav-text">安全</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mysql"><span class="nav-number">5.2.</span> <span class="nav-text">mysql</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PHP_u5982_u4F55_u8FDE_u63A5mysql"><span class="nav-number">5.3.</span> <span class="nav-text">PHP如何连接mysql</span></a></li></ol></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="icon-next-heart fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">杨卓鑫</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  
+
+
+  
+
+
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=0.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=0.5.0"></script>
+
+
+
+  
+  
+
+  
+  
+<script type="text/javascript" src="/js/src/scrollspy.js?v=0.5.0"></script>
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = NexT.utils.escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    NexT.motion.middleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+
+      if (CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          NexT.utils.displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=0.5.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"yangzhuoxin"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+  
+
+
+
+
+
+  
+  
+
+  
+  
+
+
+</body>
+</html>

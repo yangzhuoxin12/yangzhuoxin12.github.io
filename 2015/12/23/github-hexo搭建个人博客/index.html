@@ -67,7 +67,7 @@
 简介git是什么　　如今，Git 已经非常成熟，被广泛接受与使用，越来越多的项目都迁移到 Git 仓库中进行管理。以 Eclipse 社区为例。据称，目前 80% 的 Eclipse 基金会项目已经完全使用 Git 管理，CVS 访问权限已经切换成只读状态。并且，在 Eclipse 基金会官网中，针对项目管理的介绍中已将”CVS”三个字符划掉，而且很萌地写道，”D">
 <meta property="og:image" content="http://yoursite.com/imgs/BlogImgs/github-hexo搭建个人博客/WordDemo.jpeg">
 <meta property="og:image" content="http://yoursite.com/imgs/BlogImgs/github-hexo搭建个人博客/CmdMD.png">
-<meta property="og:updated_time" content="2016-02-01T10:08:29.409Z">
+<meta property="og:updated_time" content="2016-02-23T07:28:59.741Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="github+hexo搭建个人博客">
 <meta name="twitter:description" content="该文章参考了 廖学峰的Git教程
@@ -79,7 +79,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     scheme: 'Mist',
-    sidebar: {"position":"left","display":"always"},
+    sidebar: "post",
     fancybox: true,
     motion: true,
     duoshuo: {
@@ -105,10 +105,8 @@
 
   
   
-    
-  
 
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+  <div class="container one-collumn  page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -456,6 +454,7 @@
         <p><del>该文章参考了 廖学峰的<a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="external">Git教程</a></del></p>
 <h1 id="u7B80_u4ECB"><a href="#u7B80_u4ECB" class="headerlink" title="简介"></a>简介</h1><h2 id="git_u662F_u4EC0_u4E48"><a href="#git_u662F_u4EC0_u4E48" class="headerlink" title="git是什么"></a>git是什么</h2><p>　　如今，Git 已经非常成熟，被广泛接受与使用，越来越多的项目都迁移到 Git 仓库中进行管理。以 Eclipse 社区为例。据称，目前 80% 的 Eclipse 基金会项目已经完全使用 Git 管理，CVS 访问权限已经切换成只读状态。并且，在 Eclipse 基金会官网中，针对项目管理的介绍中已将”CVS”三个字符划掉，而且很萌地写道，”Ding dong, the witch is dead.”，意思是”叮咚，那个老巫婆已经挂了”。<br>　　<del>据公司前辈说svn，cvs，git是目前主流版本控制系统，以后有机会好好学一下（因为来公司后基本没接触过开发，对这三项不了解）</del><br>　　Git是目前世界上最先进的分布式版本控制系统（没有之一）。<br>　　Git有什么特点？简单来说就是：高端大气上档次！<br>　　那什么是版本控制系统？<br>　　如果你用Microsoft Word写过长篇大论，那你一定有这样的经历：<br>想删除一个段落，又怕将来想恢复找不回来怎么办？有办法，先把当前文件“另存为……”一个新的Word文件，再接着改，改到一定程度，再“另存为……”一个新文件，这样一直改下去，最后你的Word文档变成了这样：</p>
 <p><img src="/imgs/BlogImgs/github-hexo搭建个人博客/WordDemo.jpeg" alt="word图片"></p>
+<a id="more"></a>
 <p>　　过了一周，你想找回被删除的文字，但是已经记不清删除前保存在哪个文件里了，只好一个一个文件去找，真麻烦。<br>看着一堆乱七八糟的文件，想保留最新的一个，然后把其他的删掉，又怕哪天会用上，还不敢删，真郁闷。<br>　　更要命的是，有些部分需要你的财务同事帮助填写，于是你把文件Copy到U盘里给她（也可能通过Email发送一份给她），然后，你继续修改Word文件。一天后，同事再把Word文件传给你，此时，你必须想想，发给她之后到你收到她的文件期间，你作了哪些改动，得把你的改动和她的部分合并，真困难。<br>　　于是你想，如果有一个软件，不但能自动帮我记录每次文件的改动，还可以让同事协作编辑，这样就不用自己管理一堆类似的文件了，也不需要把文件传来传去。如果想查看某次改动，只需要在软件里瞄一眼就可以，岂不是很方便？<br>　　这个软件用起来就应该像这个样子，能记录每次文件的改动：
 　　</p>
 <table>
@@ -662,7 +661,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">5</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
